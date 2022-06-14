@@ -1,4 +1,4 @@
-FROM node AS build  
+FROM node AS lucifer  
 
 # Create app directory
 WORKDIR /app
@@ -20,7 +20,7 @@ COPY . .
 FROM alpine:3.14
 WORKDIR /app1
 
-COPY --from=build /app .
+COPY --from=lucifer /app .
 
 #we added a new light image
 
